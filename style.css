@@ -1,0 +1,430 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* Definição de variáveis */
+/*:root {
+    --cor-primaria: #344670;  cor antiga #550000 Cor do Rodape
+    --cor-secundaria: #57758D;  cor antiga #FF7F2A 
+    --cor-secundaria-clara: #A2AABD; /* cor antiga #FFAF7B 
+    --cor-fundo-clara: #DDDDDD;  cor antiga #DDDDDD 
+    --cor-fundo-escura: #BBBBBB; /cor antiga #BBBBBB Cor do aside
+    --cor-texto-claro: #FFFFFF; cor antiga #FFFFFF - cor do corpo principal
+    --cor-texto-escura: #344747;  cor antiga #444444 
+}*/
+
+:root {
+    --cor-primaria: #43c1eb;
+    --cor-secundaria: #e08d34;
+    --cor-secundaria-clara: #c26a10;
+    --cor-fundo: #bdd8f7;
+    --cor-texto-escura: #
+}
+
+
+/* CSS reset */
+* { 
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    /* font-family: Raleway, Calibri, Arial, sans; */
+    font-size: 14px;
+    box-sizing: border-box;
+    
+}
+html {                  /* Tamanho de fonte padrão do documento */
+    font-size: 16px;
+}
+
+/* Configuração de todos os links do site */
+a {
+    color:var(--cor-texto-escura);
+    text-decoration: none;  /* Sem sublinhado */
+}
+
+a:hover {   /* Mouse passando em cima do link */
+    color:var(--cor-secundaria);
+    text-decoration: underline; /* Volta o sublinhado */
+}
+
+header {
+    background-color: var(--cor-primaria);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#social {
+    background-color: transparent;  /* Tira a cor de fundo */
+    display: flex;
+    align-items: center;
+}
+
+#social img {
+    width: 32px;
+}
+
+#social a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#social a span {
+    margin-left: 6px;
+    display: none; /* Esconder o texto dos links */
+}
+
+#social a:hover span {
+    display: inline;  /* Mostra novamente o texto ao passar o mouse */  
+}
+
+nav ul li {
+    display: inline-block;  /* Deixa o menu na horizontal */
+    margin: 10px;
+}
+
+nav {
+    background-color: var(--cor-secundaria);  /* Cor do fundo */
+    color: var(--cor-texto-claro);             /* Cor do texto */
+}
+
+#menu {
+    padding: 0 20px;
+    text-align: center;
+}
+
+#menu li {
+    margin: 10px 0;
+}
+
+#menu a {
+    height: 100%;
+    /* padding: 10px 20px; */
+    padding-left: 10px;
+    padding: 10px 20px 0 20px;
+    color:var(--cor-texto-escura);
+    transition: 300ms;
+    background-color: var(--cor-secundaria);
+    border-bottom: 5px;    
+
+}
+
+
+
+
+
+#menu a:hover {
+    /* filter: brightness(0.8); Diminui o brilho em 20%, deixando mais escuro */
+    border-bottom: 3px solid;    
+    transition: .s;
+    text-decoration: none;
+    color:var(--cor-primaria);
+    font-size: 1.1rem;
+}
+
+#menu-contraido {
+    display: inline-block;
+    position: relative;
+}
+
+#menu-contraido input, #menu-contraido span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+#menu-contraido input {
+    z-index: 100; /* Traz o input para cima */ 
+    opacity: 0; /* Esconde o input */
+    display: none;  
+}
+
+#menu-contraido span {
+    display: block;
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+    background-image: url('img/menu-icon-48x48.png');
+    background-size: 40px 40px;
+    background-position: center center;
+    cursor: pointer; /* Cursor de mãozinha */
+    display: none;
+}
+
+/* Seletor ~: seleciona o próximo elemento (irmão) */
+#menu-contraido input:checked ~ span {
+    /* Troca a imagem */
+    background-image: url('img/close-icon-48x48.png');
+}
+
+#content {
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    /* Este elemento e seus filhos usarão flexbox */
+    display: flex;
+    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
+}
+
+main, aside {
+    background-color: var(--cor-primaria);
+    padding: 24px;
+    margin-bottom: 20px;
+    /* Bordas arrendondadas */
+    border-radius: 10px;
+    /* Sombra (drop-down shadow) */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    flex-grow: 1;   /* 1 unidade de largura (padrão) */
+    max-width: 100%;
+}
+
+main {
+    width: 75%;
+}
+
+aside {
+    margin-left: 20px;
+    background-color: var(--cor-primaria);
+    width: 25%;
+}
+
+main article, aside article {   /* article que estão de dentro de main ou aside */
+    margin: 24px 0;     /* 24px top/bottom, 0 left/right */
+    background-color: var(--cor-primaria);
+}
+
+main > h1, aside > h1 {          /* Apenas os h1 que são filhos diretos de main ou aside */
+    /* Deixar o texto em maiúsculas */
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+}
+
+article > h1 {    /* Só os h1 que são filhos diretos de article */
+    margin-bottom: 6px;
+}
+
+article > h1 > a {
+    font-size: 1.5rem;      /* 1.5x o tamanho da fonte do elemento raiz (html) */
+}
+
+article > p {
+    color: var(--cor-texto-escura);
+}
+
+article > h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase; /* Todas as letras em maiúsculas */
+}
+
+.destaque {
+    background-color: var(--cor-secundaria);
+    padding: 24px;
+    border-radius: 10px;  /* Bordas LEVEMENTE arredondadas */
+    box-shadow: 3px 3px 10px var(--cor-fundo);
+}
+
+.destaque p {
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+.destaque > h1 > a {
+    font-size: 2.5rem;
+}
+
+.destaque > h2 {
+    font-size: 1rem;
+}
+
+.foto-texto img {
+    width: 450px;
+    margin-right: 24px;
+    border-radius: 4px;
+    /* Largura máxima limitada à largura do pai */
+    max-width: 100%;
+}
+
+.foto-texto {
+    display: flex;
+    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
+}
+
+.individual h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    margin: 12px 0;
+}
+
+.individual .foto-texto {
+    flex-direction: column;
+}
+
+.individual .foto-texto p {
+    margin: 12px 0 36px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.individual .foto-texto img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+.individual p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+
+}
+
+
+
+aside > article > img {
+    display: block;
+    /* margin auto à esquerda e à direita centraliza o elemento quando este é
+       display: block */
+    margin: 0 auto;
+    border-radius: 4px; /* Borda arredondada */ 
+    /* Largura máxima é 100% da largura do pai */
+    max-width: 100%;
+}
+
+aside > article > h1 > a {
+    font-size: 1rem;
+    color: #000000;
+}
+
+aside > article > h1 {
+    margin-top: 6px;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    padding: 4px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    /* Dá espaço automaticamente entre os itens de um flexbox */
+    justify-content: space-around;
+}
+
+footer a {
+    color: #ffffff;
+    
+}
+
+footer ul li {
+    display: inline-block;  /* Coloca os itens de uma lista na horizontal */
+    padding: 0 12px;
+    border-right: 2px solid #ffffff;
+}
+
+/* Tirar a borda direita do último li */
+footer ul li:last-child {
+    border-right: none;
+}
+
+footer img {
+    width: 100px;
+    height: 100%;
+}
+
+/* Regras para larguras específicas de tela */
+@media screen and (max-width: 1020px) {  /* Breakpoint (ponto de quebra) */
+    main {
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+    .foto-texto {
+        flex-direction: column; /* Os filhos ficarão em coluna, na vertical */
+    }
+    .destaque img {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        min-height: 88px;
+        padding: 0;
+    }
+    #menu ul {
+        margin-top: 50px;
+    }
+    #menu ul li {   /* Menu vertical */
+        display: block;
+        margin: 6px 0;
+    }
+    #menu a {
+        width: 100%;
+        display: block;
+    }
+    #menu-contraido {
+        margin-top: 24px;
+        width: 100%;
+    }
+    #menu-contraido ul {
+        display: none;
+    }
+    /* Mostra o botão do menu */
+    #menu-contraido input, #menu-contraido span {
+        display: block;
+        left: 20px;
+    }
+    #menu-contraido input:checked ~ ul {
+        display: block;
+    }
+
+    #content {
+        flex-direction: column; /* Os filhos ficarão em coluna, na vertical */
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        margin-left: 0;
+        width: 100%;
+    }
+    aside > article > h1 {
+        text-align: center;
+    }
+    .destaque img {
+        /* Centralizar a imagem */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer > * {    /* Todos os filhos DIRETOS de footer */
+        margin-bottom: 12px;
+    }
+    footer ul li:first-child {  /* Só o primeiro (first-child) li */
+        padding-left: 0;
+    }
+    footer address {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /*
+        A FAZER: colocar o logo principal e os ícones de redes sociais em coluna
+    */
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        max-width: 100%;
+    }
+    .destaque > h1 > a, .individual h1 {
+        font-size: 2rem;
+    }
+    
+}
