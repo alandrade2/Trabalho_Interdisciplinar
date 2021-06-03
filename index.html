@@ -4,42 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleNew.css">
+
     <title>CadeMeuPet</title>
+
 </head>
 <body>
-    <header> <!-- Cabeçalho -->
-        <a href="./">
-            <img id="logo" src="./img/photo.ico" alt="cademeupet">
-        </a>
-        <nav id="social">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="img/facebook-64x64.png" alt="Facebook">
-                        <span>/CadeMeuPet</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/instagram-64x64.png" alt="Instagram">
-                        <span>/@CadeMeuPet</span>    
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/whatsapp-64x64.png" alt="Whatspp">
-                        <span>(16) 99999-0000</span>    
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <nav id="menu"> <!-- Menu -->
-        <div id="menu-contraido">
-            <input type="checkbox">
-            <span></span>
+<header class="header">
+    <div class="menu_mobile">
+        <div class="img-logo">
+            <a href="./">
+                <img id="logo" src="/img/cachorro.png" alt="cademeupet" width="100px" title="Creditos: svgsilh https://br.pinterest.com/svgsilh/">
+                <span>CadeMeuPet</span>
+            </a>
+        </div>
+        
+    </div>    
+    <div class="menu">
+        <input type="checkbox">
+        <span></span>
+        <div class="submenu1">
+            <nav>
+                <ul>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Contribua conosco</a></li>
+                    <li><a href="#">Assine nossa NewsLetter </a></li>
+                    <li><a href="#">Denuncie maus tratos ao animais</a></li>         
+                </ul>
+            </nav>
+        </div>    
+        <div class="submenu2">
+        <nav>
             <ul>
                 <li><a href="./">Home</a></li>
                 <li><a href="#">Adote um pet</a></li>
@@ -48,102 +43,115 @@
                 <li><a href="#">Pets adotados</a></li>
                 <li><a href="./Login.html">Login Membros</a></li>
             </ul>
-        </div>
-    </nav>
-    
-    <div id="content"> <!-- Área de conteúdo -->
-        <main> <!-- Divisão principal do site -->
-            
-            <h1>Notícias</h1>
-
-            <article class="destaque">   <!-- Representa um artigo ou notícia -->
-                <h2>Adote um pet</h2>
-                <h1><a href="#">Cadelinha estrela é adotada</a></h1>
-                <div class="foto-texto">
-                    <img src="./img/photo.ico" alt="Foto dos noivos" title="Foto: Aleksandr Neplokhov" >
-                    <p>Depois de vários meses sendo vitima de maus tratos, estrela finalmente encontrou um lar.</p>
-                </div>
-            </article>
-
-            <article>   <!-- Representa um artigo ou notícia -->
-                <h2>Doadores do mês</h2>
-                <h1><a href="#">Arrecadação de junho supera o valor recebido no mesmo periodo do ano passado.</a></h1>
-                <p>Já está disponível a prestação de contas. Parte do dinheiro será usado para tratamento do pitbull "doguinho".</p>
-                 
-            </article>
-
-            <article>   <!-- Representa um artigo ou notícia -->
-                <h2>entretenimento Pet</h2>
-                <h1><a href="#">Séries de videos engraçados fazem a alegria da galera.</a></h1>
-                <p>Membros elegem os videos mais engraçados. Os mais votados serão postados no canal do youtube</p>
-            </article>
-
-            <article>
-                <h2>Pet adotados</h2>
-                <h1><a href="#">Campanha de marketing surte efeito. 52 animais adotados no mês de maio/2021.</a></h1>
-                <p>As novas formas de adoção beneficiam pessoas que não tem condições de manter um pet em casa.</p>
-            </article>
-
-        </main>
-        <aside>
-            <h1>anuncios patrocinados</h1>
-
-            <article>
-                <img src="./img/photo.ico" alt="anuncio pago" title="#">
-                <h1><a href="#">Naturallis, cardápio animal. Compre rações e produtos naturais para seu pet; Entregamos em domicilio.</a></h1>
-            </article>
-
-            <article>
-                <img src="./img/photo.ico" alt="anuncio pago" title="#">
-                <h1><a href="#">Hotel Animal, precisou sair? hospede seu pet com a gente. visite nosso site.</a></h1>
-            </article>
-            <article>
-                <img src="./img/photo.ico" alt="anuncio pago" title="#">
-                <h1><a href="#">Clinica veterinária Pet-Cão. Há dez anos cuidando da saúde do seu companheiro. Chame no zap (16)98765-4321, e seja atendido sem sair de casa.</a></h1>
-            </article>
-            <address>
-                <p>Anuncie com a gente.Ajude nos a salvar um pet.</p>
-                Rua da cachorrada, 22<br>
-                Cidade dos Pets/SP<br>
-                <a href="tel:+55166661111">(16) 6666-1111</a><br>
-                <a href="mailto:contato@cademeupet.com.br">contato@cademeupet.com.br</a>
-            </address>
-            
-        </aside>
+        </nav>
+        </div>    
     </div>
-   
 
-        <footer> <!-- Rodapé da pagina -->
-            <img src="./img/photo.ico" alt="cademeupet">
+</header>
+
+
+<div id="content">
+
+    <main>
+        
+        <h1>Notícias</h1>
+
+        <article class="destaque">   <!-- Representa um artigo ou notícia -->
+            <h2>Adote um pet</h2>
+            <h1><a href="#">Cadelinha estrela é adotada</a></h1>
+            <div class="foto-texto">
+                <img src="/img/Noticia_destaque.jpeg" alt="Foto Cadela estrela">
+                <p>Depois de vários meses sendo vitima de maus tratos, cadelinha "estrela" finalmente encontrou um lar.</p>
+            </div>
+        </article>
+
+        <article>   <!-- Representa um artigo ou notícia -->
+            <h2>Doadores do mês</h2>
+            <h1><a href="#">Arrecadação de junho supera o valor recebido no mesmo periodo do ano passado.</a></h1>
+            <p>Já está disponível a prestação de contas. Parte do dinheiro será usado para tratamento do pitbull "doguinho".</p>
+             
+        </article>
+
+        <article>   <!-- Representa um artigo ou notícia -->
+            <h2>entretenimento Pet</h2>
+            <h1><a href="#">Séries de videos engraçados fazem a alegria da galera.</a></h1>
+            <p>Membros elegem os videos mais engraçados. Os mais votados serão postados no canal do youtube</p>
+        </article>
+
+        <article>
+            <h2>Pet adotados</h2>
+            <h1><a href="#">Campanha de marketing surte efeito. 52 animais adotados no mês de maio/2021.</a></h1>
+            <p>As novas formas de adoção beneficiam pessoas que não tem condições de manter um pet em casa.</p>
+        </article>
+
+
+    </main>
+
+    <aside>
+        <h1>anuncios patrocinados</h1>
+
+        <article>
+            <img src="/img/Cardapioanimal.jpg" alt="anuncio pago" title="Creditos: https://www.acuvet.com.br/alimentacao-natural-para-caes/">
+            <h1><a href="#">Naturallis, cardápio animal. Compre rações e produtos naturais para seu pet; Entregamos em domicilio.</a></h1>
+        </article>
+
+        <article>
+            <img src="./img/hotel-para-gatos-01.jpg" alt="anuncio pago" title="Creditos: ideal pet Care">
+            <h1><a href="https://www.idealpetcare.com.br/hotel-para-gatos" target="_blank" >Hotel Animal, precisou sair? hospede seu pet com a gente. visite nosso site.</a></h1>
+        </article>
+        <article>
+            <img src="./img/animed.jpg" alt="anuncio pago" title="Foto: Reprodução/TV Globo">
+            <h1><a href="#">Clinica veterinária ANIMED. O plano de saúde Animal. Há dez anos cuidando da saúde do seu companheiro. Chame no zap (16)98765-4321, e seja atendido sem sair de casa.</a></h1>
+        </article>
+        <address>
+            <p>Anuncie com a gente.Ajude nos a salvar um pet.</p>
+            Rua da cachorrada, 22<br>
+            Cidade dos Pets/SP<br>
+            <a href="tel:+55166661111">(16) 6666-1111</a><br>
+            <a href="mailto:contato@cademeupet.com.br">contato@cademeupet.com.br</a>
+        </address>
+        
+
+        
+
+    </aside>
+
+</div>
+
+
+<footer> <!-- Rodapé -->
+
+        <img src="img/cachorro.png" alt="cademeupet">
+
+        <ul class="ulfooter" >
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Nossa missão</a></li>
+            <li><a href="#">Comercial</a></li>
+        </ul>
+
+        <nav id="social">
             <ul>
-                <!-- <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Nossa missão</a></li>
-                <li><a href="#">Comercial</a></li> -->
+                <li>
+                    <a href="#">
+                        <img src="img/facebook-64x64.png" alt="Facebook">
+                        <span>/cademeupet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/instagram-64x64.png" alt="Instagram">
+                        <span>/@cademeupet</span>    
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/whatsapp-64x64.png" alt="Whatspp">
+                        <span>(16) 98765-4321</span>    
+                    </a>
+                </li>
             </ul>
-            <nav id="social">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="img/facebook-64x64.png" alt="Facebook">
-                            <span>/CadeMeuPet</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/instagram-64x64.png" alt="Instagram">
-                            <span>/@CadeMeuPet</span>    
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/whatsapp-64x64.png" alt="Whatspp">
-                            <span>(16) 99999-0000</span>    
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        </nav>
+    </footer>
 
-        </footer>
-    
-    </body>
+</body>
 </html>

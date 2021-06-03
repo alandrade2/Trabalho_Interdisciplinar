@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    /* cor primaria em RGB 
+      #8C7C2A = RGB(140,124,42)
+    */
+    --cor-primariaRGB: 140, 124, 42;
+    --cor-primaria: #8C7C2A; /* cor antiga #550000 Cor do Rodape*/
+    --cor-secundaria: #8C7C2A; /* cor antiga #FF7F2A */
+    --cor-secundaria-clara: #F29C50; /* cor antiga #FFAF7B */
+    --cor-fundo-clara: #77A69D; /* cor antiga #DDDDDD */
+    --cor-fundo-escura: #BBBBBB; /* cor antiga #BBBBBB Cor do aside*/
+    --cor-texto-claro: #FFFFFF; /* cor antiga #FFFFFF - cor do corpo principal*/
+    --cor-texto-escura: #344747; /* cor antiga #444444 */
+}
+
+
 *{
   margin: 0;
   padding: 0;
@@ -12,8 +27,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #344670;
-  /* background: #051320; */
+  /* background: #8C7C2A; */
+   background-color: rgba(var(--cor-primariaRGB), 0.4) 
 }
 
 .calendar{
@@ -26,7 +41,7 @@ body{
   position: absolute;
   width: 80px;
   height: 80px;
-  box-shadow: 206px 208px #A2AABD, -35px 70px #DDDDDD;
+  box-shadow: 206px 208px #77A69D, -35px 70px #F29C50;
   border-radius: 50%;
 }
 
@@ -46,8 +61,7 @@ body{
 
 .calendar .calendar-body .month-name{
   color: #fff;
-  background: #57758D;
-  /* background: #32be8f; */
+  background: #77A69D;
   width: 100%;
   font-size: 1.6em;
   text-align: center;
@@ -79,7 +93,6 @@ body{
 }
 
 
-
 .wave{
 	position: fixed;
 	bottom: 0;
@@ -103,6 +116,12 @@ body{
 	align-items: center;
 }
 
+.login-content h4 {
+    font-size: 1.3rem;
+    color: var(--cor-fundo-clara);
+
+}
+
 .login-content{
 	display: flex;
 	justify-content: flex-start;
@@ -124,8 +143,7 @@ form{
 
 .login-content h2{
 	margin: 15px 0;
-	color: #57758D;
-	/* color: #333; */
+	color: #77A69D;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
@@ -175,7 +193,7 @@ form{
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color: #57758D;
+	background-color: #77A69D;
 	transition: .4s;
 }
 
@@ -197,7 +215,7 @@ form{
 }
 
 .input-div.focus > .i > i{
-	color: #376d5b;
+	color: #77A69D;
 }
 
 .input-div > div > input{
@@ -211,7 +229,7 @@ form{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: rgb(94, 55, 55);
+	color: #77A69D;
 	font-family: 'poppins', sans-serif;
 }
 
@@ -239,7 +257,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #3e5959, #678787, #364f4f);
+	background-image: linear-gradient(to right, #77A69D, #678787, #364f4f);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
