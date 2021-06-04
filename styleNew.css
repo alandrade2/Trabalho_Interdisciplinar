@@ -24,13 +24,14 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     box-sizing: border-box;   
 }
 
 header {
     display: flex;
     box-sizing: border-box;
+    background-color: rgba(var(--cor-primariaRGB), 0.1);
 }
 
 .img-logo {
@@ -50,8 +51,8 @@ header {
     background-color: rgba(var(--cor-primariaRGB), 0.3);
     width: 100%;
     margin-right: 5px;
-    border-radius: 5px;
 }
+
 
 .menu li {
     margin: 10px 0;
@@ -78,7 +79,8 @@ header {
 }
 
 
-.menu input, .menu span {
+
+input, span {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -87,13 +89,13 @@ header {
     
 }
 
-.menu input {
+input {
     z-index: 100; 
     opacity: 0; 
     display: none;  
 }
 
-.menu span {
+ span {
     display: block;
     background-color: rgba(var(--cor-primariaRGB), 0.8);
     border-radius: 4px;
@@ -106,27 +108,27 @@ header {
 }
 
 /* Seletor ~: seleciona o próximo elemento (irmão) */
-.menu input:checked ~ span {
+ input:checked ~ span {
     /* Troca a imagem */
     background-image: url('img/close-icon-48x48.png');
 }
 
 
 .submenu2 {
-    padding: 25px;
+    padding: 20px;
     border-radius: 5px;
     background: var(--cor-primaria);
 }
 
 .submenu1 a {
-    color: var(--cor-texto-escura);        
-    font-size: 1.3rem;
+    color: var(--cor-texto-claro); 
+    font-size: 1.1rem;
 }
 
 
 .submenu2 a {
     color: var(--cor-texto-claro); 
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 nav ul li {
@@ -347,24 +349,44 @@ footer img {
         font-size: 1.0rem;
     }
     .img-logo {
-        height: 140px;
+        height: 130px;
     }
-    
-
 
 }
 
-
 /* 2° Breakpoint  */
 
-@media screen and (max-width: 1030px) { 
+@media screen and (max-width: 1020px) { 
+    .submenu1 a {
+        font-size: 0.8rem;
+    }
+    
+    
+    .submenu2 a {
+        font-size: 0.7rem;
+    }
+}
 
+/* 3° Breakpoint  */
+
+@media screen and (max-width: 840px) { 
 
     #content {
         flex-direction: column;
         align-items: center;
 
     }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    header img {
+        max-width: 80%;
+    }
+
 
     main {
         width: 100%;
@@ -403,73 +425,50 @@ footer img {
         font-size: 2rem;
     }
     .img-logo {
-        margin-left: 10px;
+        /* margin-left: 10px; */
         border-radius: 5px;
-    }
-    .menu {
+        display: block;
         width: 100%;
     }
-    .submenu1 ul {
+    /* Mostra o botão do menu */
+     input,  span {
+        display: block;
+        left: 150px;
+    }
+
+    input:checked ~ .menu {
+        display: block;
+    }
+
+
+    .menu {
         display: none;
     }
+
+    .menu a {
+        font-size: 1.1rem;
+    }
+    
+    nav ul li {
+        display: block;
+    }
+
 
     .submenu2 {
-        display: none;
+        padding: 0;
+        background-color: rgba(var(--cor-primariaRGB), 0.1);    
+    }
+    footer ul li {
+        padding: 12px;
+        border-right: none;
     }
 
-    /* Mostra o botão do menu */
-    .menu input, .menu span {
-        display: block;
-        left: 20px;
-    }
+}
 
-    /* ações do botão de menu */
-    .menu input:checked ~ .submenu1 ul {
-        display: block;
-
-    }
-
-    .menu input:checked ~ .submenu1 > li > a,
-    .submenu2 > li > a {
-        color: #000000;
-
-    }    
-
-    .menu input:checked ~ .submenu2 {
-        display: block;
-        flex-direction: row;
-        
-    }    
-    .menu input:checked ~ .submenu1, .submenu2 {
-        background-color: rgba(var(--cor-primariaRGB), 0.1);
-      height: 150px;  
-
-    }
-
-    .menu input:checked ~ .img-logo {
-        height: 350px;  
-  
-      }
-    
-
-    }
-
-
-
-
-/* 3° Breakpoint  */
+/* 4° Breakpoint  */
 
 @media screen and (max-width: 640px) {
 
-    header{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header img {
-
-        max-width: 80%;
-    }
     .destaque > h1 > a, .individual h1 {
         font-size: 2rem;
     }
@@ -479,23 +478,12 @@ footer img {
         margin-bottom: 24px;
     }
 
-
-
-    footer ul li {
-        padding: 12px;
-        border-right: none;
+    .ulfooter {
+     display: flex;
+     flex-direction: column;   
     }
-    .ulfooter a {
-        text-decoration: none;
-        border: 1px solid  rgba(240,240,240, 0.6);
-        border-radius: 5px;
-        color: #000000;
-        background-color: rgba(240,240,240, 0.6);
-    }
-
-    .ulfooter a:hover {
-     background-color: rgba(240,240,240, 0.3);
+   
 }
 
-}
+
 
